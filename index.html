@@ -1,0 +1,136 @@
+<html>
+<head>
+  <title>Semantle Crab</title>
+  <meta name="viewport" content="width=device-width">
+  <script src="solve.js" defer></script>
+  <style>
+    #things {
+      align-items: center;
+      margin:auto;
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-size:30px;
+      color:lightgray;
+      background-image: linear-gradient(rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)), url("giant_enemy_crab_crop.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      overflow: auto;
+    }
+    a:link {
+      color: green;
+    }
+    a:visited {
+      color: green;
+    }
+    #formtable {
+      width: 400px; 
+      text-align: center;
+      font-size:40px;
+      border-collapse: collapse;
+      table-layout:fixed;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: transparent;
+      color:white;
+      opacity: 1.0;
+    }
+    #output {
+      width: 400px; 
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #massive, #damage {
+      font-size:30px;
+      text-align: center;
+      width:100%;
+      min-width:50%;
+    }
+    th {
+      border: 1px solid;
+      width: 50%;
+      max-width:50%;
+      color: white;
+    }
+    td {
+      border: 1px solid;
+      width: 50%;
+      max-width:50%;
+      color: white;
+    }
+    .inputNums {
+      text-align: center;
+      height: 2em;
+      font-size:40px;
+      width: 100%;
+      background-color: transparent;
+      color: green;
+      opacity: 1.0;
+    }
+    .button {
+        width: 100%;  
+        height: 2em;
+      font-size:30px;
+      opacity: 0.5;
+    }
+    html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    }
+    body {
+      margin: 0px;
+      min-height: 100%;
+      width: 100%;
+    }
+    p {
+      text-align: center;
+    }
+    ul {
+      text-align: center;
+      list-style-type: none; /* Remove bullets */
+      padding: 0; /* Remove padding */
+      margin: 0; /* Remove margins */
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=2"  />
+</head>
+<body>
+<div id="things">
+    <div id="instructions">
+      <br />
+      <ul>
+        <li>Open <a href="https://semantle.novalis.org/">Semantle</a> or <a href="https://semantle.pimanrul.es/">Pimantle</a></li>
+        <li>Guess <b>giant</b></li>
+        <li>Guess <b>enemy</b></li>
+        <li>Guess <b>crab</b></li>
+        <li>Enter scores</li>
+        <li>Solve</li>
+      </ul>
+    </div>
+    <div id="weakpoint">
+        <br />
+        <form id="guessform">
+        <table id="formtable">
+            <tr><th>Word</th><th>Score</th></th>
+            <tr><td>giant</td><td><input type="text" id="giant" value="0.0" onClick="this.select();"  class="inputNums" /></td></tr>
+            <tr><td>enemy</td><td><input type="text" id="enemy" value="0.0" onClick="this.select();"  class="inputNums" /></td></tr>
+            <tr><td>crab</td><td><input type="text" id="crab" value="0.0" onClick="this.select();"  class="inputNums" /></td></tr>
+            <tr><td colspan=2>
+                <input type="submit" value="Solve" class="button" />
+            </td></tr>        
+        </table>
+        </form>
+    </div>
+    <div id="output">
+      <div id="massive"></div><div id="damage"></div>
+    </div>
+    <div id="credits">
+        <p><a href="https://github.com/manimino/semantle-crab">Code</a> | <a href='https://www.deviantart.com/vegasmike/art/Incredible-Giant-Crab-Redux-38936734'>Image</a></p>
+    </div>
+</div>
+</body>
+</html>
